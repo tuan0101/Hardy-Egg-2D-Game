@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 103f9f3aae995d441a6c7eab5f894799
+timeCreated: 1555526559
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MINECRAFT PE
+  fontNames:
+  - MINECRAFT PE
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f59a089ccb063a64780f9f6e42619fa5
+timeCreated: 1505965379
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: VINTAGE COLLEGE DEPT_DEMO_worn
+  fontNames:
+  - VINTAGE COLLEGE DEPT_DEMO_worn
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
