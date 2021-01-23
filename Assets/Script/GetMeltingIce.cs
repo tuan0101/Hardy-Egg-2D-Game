@@ -7,20 +7,12 @@ public class GetMeltingIce : MonoBehaviour {
     public Sprite[] sprites;
     public float spawnRate;
 
-    // Use this for initialization
-    void Start()
-    {
-
-
-    }
-
     void Update()
     {
         if (transform.position.x < ObstaclePoint.position.x)
         {
             generateObstacble();
         }
-
     }
 
     void generateObstacble()

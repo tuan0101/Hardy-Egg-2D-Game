@@ -92,9 +92,6 @@ public class PlayerController : MonoBehaviour
         DrawLine();
     }
 
-
-
-
     void PlayerMove()
     {
         

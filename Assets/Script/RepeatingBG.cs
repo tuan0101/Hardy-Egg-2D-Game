@@ -9,8 +9,6 @@ public class RepeatingBG : MonoBehaviour {
 
     float platformWidth = 15f;
 
-
-
 	// Update is called once per frame
 	void Update () {
 		if (transform.position.x < generatorPoint.position.x) {	

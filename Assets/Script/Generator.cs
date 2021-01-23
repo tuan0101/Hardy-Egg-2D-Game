@@ -10,8 +10,6 @@ public class Generator : MonoBehaviour {
 	float platformWidth = 15f;
 	// Use this for initialization
 	void Start () {
-
-
 		GameObject newBG2 = theObjectPool.getPooledObject ();
 		newBG2.transform.position = new Vector2 (-platformWidth, 0);
 
@@ -23,7 +21,6 @@ public class Generator : MonoBehaviour {
 	void Update () {
         generateForward();
         generateBackward();
-
     }
 
     void generateForward()

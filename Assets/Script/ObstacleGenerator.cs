@@ -10,18 +10,12 @@ public class ObstacleGenerator : MonoBehaviour {
     public float coLumnMin;
 	public float coLumnMax;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
         if (transform.position.x < ObstaclePoint.position.x)
         {
             generateObstacble();
         }
-
     }
 
     void generateObstacble()

@@ -13,8 +13,6 @@ public class DestroyGroup : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-
         if (transform.position.x < destroyPoint.transform.position.x)
         {
             gameObject.SetActive(false);
@@ -26,7 +24,6 @@ public class DestroyGroup : MonoBehaviour {
                     box[i].enabled = true;
 
                 }
-
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -37,8 +34,6 @@ public class DestroyGroup : MonoBehaviour {
         for (int i = 0; i < box.Length; i++)
         {
             box[i].enabled = true;
-
         }
     }
-
 }

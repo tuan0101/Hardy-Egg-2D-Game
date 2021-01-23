@@ -24,6 +24,5 @@ public class CameraController : MonoBehaviour {
                  transform.position.y, transform.position.z);
 
         lastPlayerPos = player.transform.position;
-
     }
 }

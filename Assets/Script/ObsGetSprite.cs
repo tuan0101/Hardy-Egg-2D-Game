@@ -16,8 +16,5 @@ public class ObsGetSprite : MonoBehaviour
         //Get colider automatically from prefab objects.
         this.GetComponent<PolygonCollider2D>().points = sprites[i].GetComponent<PolygonCollider2D>().points;
         //this.GetComponent<PolygonCollider2D>().autoTiling = true;
-
     }
-
-
 }

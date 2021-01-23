@@ -25,8 +25,7 @@ public class ObjectPooler : MonoBehaviour {
 				return objects[i];
 			}
 		}
-		return null;
-			
+		return null;			
 	}
 	
 }

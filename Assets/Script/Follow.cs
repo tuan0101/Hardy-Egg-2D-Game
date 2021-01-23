@@ -20,6 +20,5 @@ public class Follow : MonoBehaviour {
     {
         offset.x = transform.position.x / transform.localScale.x / paralax;
         mat.mainTextureOffset = offset;
-
     }
 }
