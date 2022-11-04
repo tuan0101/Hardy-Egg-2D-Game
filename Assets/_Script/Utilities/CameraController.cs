@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	PlayerController player;
-
+	//PlayerController player;
+    Transform player;
     Vector3 lastPlayerPos;
 
     float distanceToMove;
     //float moveDistance;
 
 	void Start () {
-		player = FindObjectOfType<PlayerController> ();
+        //player = FindObjectOfType<PlayerController> ();
+        player = GameObject.Find("PlayerController").GetComponent<Transform>();
         lastPlayerPos = player.transform.position;
         //lastCamPos = transform.position;
     }

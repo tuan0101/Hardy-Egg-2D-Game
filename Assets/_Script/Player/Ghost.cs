@@ -8,15 +8,16 @@ public class Ghost : MonoBehaviour {
     private float ghostDelaySeconds;
     public GameObject ghost;
     public bool makeGhost = false;
-    public PlayerController player;
+    public EggMovement player;
     
     // Use this for initialization
     void Start () {
         ghostDelaySeconds = ghostDelay;
+        //player = GameObject.Find("PlayerController").GetComponent<EggMovement>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         if(player.ghost)
         {
             if (ghostDelaySeconds > 0)

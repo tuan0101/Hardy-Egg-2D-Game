@@ -6,49 +6,49 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {
     //static bool isSlider;
-    public float moveSpeed, jumpPower;
+    public float moveSpeed, jumpPower;  
     public float targetDistance;
     public float firstPoint;
     public float secondPoint;
     public float getHeight;
     public float brkEggSpeed;
     public bool isGrounded = true;
-    public bool autoPlay = false;
+    public bool autoPlay = false;    
 
-    public ScoreKeeper scoreBoard;
+    public ScoreKeeper scoreBoard;  
     public Transform brokenEgg;
-    public Animator myAni;
+    public Animator myAni;           
     public ParticleSystem runEffect;
     public ParticleSystem jumpEffect;
     public GameObject gameOverUI;
     public bool ghost;
     public bool flipIsTrue;
-    public GameObject jumpButton;
+    public GameObject jumpButton;   
 
     //Button Type pick
-    public GameObject stickControl;
+    public GameObject stickControl;  
     public GameObject fixedBtton;
 
     ParticleSystem.EmissionModule jumpEmission;
     public ParticleSystem.EmissionModule runEmission;
 
-    float moveX, moveY;
+    float moveX, moveY;             
     bool gameHasEnded = false;
     bool facingRight = false;
     bool isDead = false;
-    Animator UIAnim;
-    Animator UIScreen;
-    Rigidbody2D rd;
-    int scoreValue = 1;
+    Animator UIAnim;     
+    Animator UIScreen;   
+    Rigidbody2D rd;                 
+    int scoreValue = 1;     //
     //testing
     GameObject[] myPlayer;
 
-    AudioSource audioSource;
+    AudioSource audioSource;        
     public AudioClip hit_sound;
     public AudioClip jump_sound;
-    public AudioClip[] gameOver;
-    LineRenderer lineRdr;
-    int lineCount = 0;
+    public AudioClip[] gameOver;        
+    LineRenderer lineRdr;  //
+    int lineCount = 0;      //
     //Vector2 lastPos = Vector2.one * float.MaxValue;
 
 

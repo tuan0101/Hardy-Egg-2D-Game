@@ -10,9 +10,8 @@ public class ScoreKeeper : MonoBehaviour {
     public Text highScore;
 	
 	void Start () {
-        myText = GetComponent<Text>();
+        myText = this.GetComponent<Text>();
         Reset();
-
         highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
 	}
 	
