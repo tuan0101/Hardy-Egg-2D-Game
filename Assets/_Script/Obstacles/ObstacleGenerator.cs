@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ObstacleGenerator : MonoBehaviour {
 
-	//public GameObject obstacle;
-	public Transform ObstaclePoint;
-	public ObjectPooler[] theObjectPool;
-    public float coLumnMin;
-	public float coLumnMax;
+    [SerializeField] private Transform ObstaclePoint;
+    [SerializeField] private ObjectPooler[] theObjectPool;
+    private float coLumnMin;
+	private float coLumnMax;
 
 	// Update is called once per frame
 	void Update () {

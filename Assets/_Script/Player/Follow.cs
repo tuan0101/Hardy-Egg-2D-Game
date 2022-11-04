@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Follow : MonoBehaviour {
+    [SerializeField] private float paralax = 2f;
+
     Vector2 offset;
     Material mat;
     MeshRenderer mr;
-    public float paralax = 2f;
+
     // Use this for initialization
     void Start()
     {

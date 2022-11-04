@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    int scoreValue = 1;    
-    public ScoreKeeper scoreKeeper;
-    public Rigidbody2D rd;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
-        rd = GetComponent<Rigidbody2D>();
-
-    }
+    int scoreValue = 1;
+    [SerializeField] private ScoreKeeper scoreKeeper;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {       

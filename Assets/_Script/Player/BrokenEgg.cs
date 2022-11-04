@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BrokenEgg : MonoBehaviour {
 
-    public float speed = 45f;
-    Rigidbody2D[] myChildren;
+    [SerializeField] private float speed = 45f;
+    private Rigidbody2D[] myChildren;
     void Start()
     {
         myChildren = GetComponentsInChildren<Rigidbody2D>();

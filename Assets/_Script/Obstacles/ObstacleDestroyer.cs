@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleDestroyer : MonoBehaviour {
-	public GameObject DestroyPoint;
+	private GameObject DestroyPoint;
 	// Use this for initialization
 	void Start () {
 		DestroyPoint = GameObject.Find ("DestroyPoint");

@@ -6,34 +6,34 @@ using UnityStandardAssets.CrossPlatformInput;
 [RequireComponent(typeof(EggPresenter))]
 public class EggMovement : MonoBehaviour
 {
-    public EggPresenter eggPresenter;
+    public EggPresenter EggPresenter { get; set; }
 
     [Header("Egg Attributes")]
-    public float moveX, moveY;
-    public float moveSpeed, jumpPower;
-    public bool facingRight = false;
-    Rigidbody2D rd;
+    [SerializeField] private float moveX, moveY;
+    [SerializeField] private float moveSpeed, jumpPower;
+    [SerializeField] private bool facingRight = false;
+    private Rigidbody2D rd;
 
     [Header("Auto AI")]
-    public float targetDistance;
-    public float firstPoint;
-    public float secondPoint;
-    public float getHeight;
-    public float brkEggSpeed;
+    [SerializeField] private float targetDistance;
+    [SerializeField] private float firstPoint;
+    [SerializeField] private float secondPoint;
+    [SerializeField] private float getHeight;
+    [SerializeField] private float brkEggSpeed;
 
     [Header("Ghost Effect")]
-    public bool autoPlay = false;
-    public bool flipIsTrue;
-    public bool ghost;
+    [SerializeField] private bool autoPlay = false;
+     public bool FlipIsTrue { get; set; }
+    public bool Ghost { get; set; }
 
     [Header("Score")]
-    int scoreValue = 1;
-    public ScoreKeeper scoreKeeper;
+    private int scoreValue = 1;
+    [SerializeField] private ScoreKeeper scoreKeeper;
 
     // Start is called before the first frame update
     void Start()
     {
-        eggPresenter = GetComponent<EggPresenter>();
+        EggPresenter = GetComponent<EggPresenter>();
 
         rd = GetComponent<Rigidbody2D>();
     }
@@ -47,7 +47,7 @@ public class EggMovement : MonoBehaviour
         //activate jump particle system
         if (moveY < -9 && moveY > -10)
         {
-            eggPresenter.jumpEffect.Play();
+            EggPresenter.JumpEffect.Play();
             //jumpEmission.enabled = true;
         }
 
@@ -55,12 +55,12 @@ public class EggMovement : MonoBehaviour
         if (moveX < 0f && facingRight == false)
         {
             FlipPlayer();
-            flipIsTrue = true;
+            FlipIsTrue = true;
         }
         else if (moveX > 0f && facingRight == true)
         {
             FlipPlayer();
-            flipIsTrue = false;
+            FlipIsTrue = false;
         }
 
         //auto move
@@ -69,18 +69,18 @@ public class EggMovement : MonoBehaviour
         rd.velocity = new Vector2(moveX * moveSpeed, rd.velocity.y);
         if (moveX != 0)
         {
-            ghost = true;
-            eggPresenter.runEmission.enabled = true;
+            Ghost = true;
+            EggPresenter.SetRunEmission(true);
             //runEffect.Emit(30);
         }
         else
         {
-            ghost = false;
-            eggPresenter.runEmission.enabled = false;
+            Ghost = false;
+            EggPresenter.SetRunEmission(false);
         }
 
         //animation
-        eggPresenter.myAni.SetFloat("Speed", Mathf.Abs(rd.velocity.x));
+        EggPresenter.MyAnim.SetFloat("Speed", Mathf.Abs(rd.velocity.x));
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -111,6 +111,6 @@ public class EggMovement : MonoBehaviour
         //stop the egg from falling down
         rd.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         this.GetComponent<CapsuleCollider2D>().enabled = false;
-        eggPresenter.PlayBrokenEffect();
+        EggPresenter.PlayBrokenEffect();
     }
 }

@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FakeCollider : MonoBehaviour {
-    public GameObject player;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    [SerializeField] private GameObject player;
+
 	// Update is called once per frame
 	void Update () {
         transform.position = player.transform.position;

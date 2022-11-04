@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour {
 
-    public float ghostDelay;
+    [SerializeField] private float ghostDelay;
+    [SerializeField] private GameObject ghost;
+    [SerializeField] private bool makeGhost = false;
+    [SerializeField] private EggMovement player;
+
     private float ghostDelaySeconds;
-    public GameObject ghost;
-    public bool makeGhost = false;
-    public EggMovement player;
-    
+
     // Use this for initialization
     void Start () {
         ghostDelaySeconds = ghostDelay;
@@ -18,7 +19,7 @@ public class Ghost : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if(player.ghost)
+        if(player.Ghost)
         {
             if (ghostDelaySeconds > 0)
             {
@@ -33,7 +34,7 @@ public class Ghost : MonoBehaviour {
                 
                 currentGhost.transform.localScale = this.transform.localScale;
                 Vector3 flip = gameObject.transform.localScale;
-                if (player.flipIsTrue)
+                if (player.FlipIsTrue)
                 {
                     flip.x *= -1;
                     currentGhost.transform.localScale = flip;

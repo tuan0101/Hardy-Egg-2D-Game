@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Generator : MonoBehaviour {
+public class BackGroundGenerator : MonoBehaviour {
 
-	public Transform GeneratorPoint;
-    public Transform BackPoint;
-    public ObjectPooler theObjectPool;
-	float platformWidth = 15f;
+    [SerializeField] private Transform GeneratorPoint;
+    [SerializeField] private Transform BackPoint;
+    [SerializeField] private ObjectPooler theObjectPool;
+	private float platformWidth = 15f;
+
 	// Use this for initialization
 	void Start () {
 		GameObject newBG2 = theObjectPool.getPooledObject ();

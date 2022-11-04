@@ -7,7 +7,7 @@ public class ScoreKeeper : MonoBehaviour {
     int score;
     Text myText;
 
-    public Text highScore;
+    [SerializeField] private Text highScore;
 	
 	void Start () {
         myText = this.GetComponent<Text>();

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public GameObject stickControl;
-    public GameObject fixedBtton;
-    public GameObject jumpButton;
-
+    public GameObject StickControl { get; set; }
+    public GameObject FixedBtton { get; set; }
+    [SerializeField] private GameObject jumpButton;
 
     public void DisableJump()
     {

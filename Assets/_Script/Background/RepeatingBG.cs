@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RepeatingBG : MonoBehaviour {
 
-	public Transform generatorPoint;
-    public Transform BackPoint;
+	[SerializeField] private Transform generatorPoint;
+    [SerializeField] private Transform BackPoint;
 
     float platformWidth = 15f;
 

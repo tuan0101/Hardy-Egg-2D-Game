@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonSetting : MonoBehaviour {
-    public bool slider;
+    private bool slider;
 
     public void ButtonType()
     {

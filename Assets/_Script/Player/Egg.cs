@@ -6,13 +6,13 @@ using UnityStandardAssets.CrossPlatformInput;
 [RequireComponent(typeof(PlayerAudio), typeof(PlayerInput), typeof(EggMovement))]
 public class Egg : MonoBehaviour
 {
-    [SerializeField] PlayerAudio playerAudio;
-    [SerializeField] PlayerInput playerInput;
-    [SerializeField] EggMovement eggMovement;
+    [SerializeField] private PlayerAudio playerAudio;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private EggMovement eggMovement;
 
-    public bool isDead = false;
-    public bool isGrounded = true;
-    bool gameHasEnded = false;
+    [SerializeField] private bool isDead = false;
+    [SerializeField] private bool isGrounded = true;
+    private bool gameHasEnded = false;
 
     private void Start()
     {
@@ -46,7 +46,7 @@ public class Egg : MonoBehaviour
             // still need a look again ????
             if (isGrounded == false)
             {
-                eggMovement.eggPresenter.PlayJumpEffect();
+                eggMovement.EggPresenter.PlayJumpEffect();
             }
         }
     }
@@ -56,20 +56,20 @@ public class Egg : MonoBehaviour
         //controls
         if (ButtonManager.isSlider)
         {
-            playerInput.stickControl.SetActive(true);
-            playerInput.fixedBtton.SetActive(false);
+            playerInput.StickControl.SetActive(true);
+            playerInput.FixedBtton.SetActive(false);
         }
         else
         {
-            playerInput.fixedBtton.SetActive(true);
-            playerInput.stickControl.SetActive(false);
+            playerInput.FixedBtton.SetActive(true);
+            playerInput.StickControl.SetActive(false);
         }
 
         eggMovement.MoveEgg();
 
         if (!isGrounded)
         {
-            eggMovement.eggPresenter.PlayRunEffect();
+            eggMovement.EggPresenter.PlayRunEffect();
         }
     }
 
@@ -94,7 +94,7 @@ public class Egg : MonoBehaviour
             }
 
             playerAudio.PlayGameOver();
-            eggMovement.eggPresenter.UIGameOver();
+            eggMovement.EggPresenter.UIGameOver();
         }
     }
 }

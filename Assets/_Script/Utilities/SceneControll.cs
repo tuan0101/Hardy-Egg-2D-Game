@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneControll : MonoBehaviour {
-    AudioSource audioSource;
-    public AudioClip click;
-	public void loadScene(string name){
-        StartCoroutine(load(name));
-	}
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip click;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-    } 
+    }
+    public void loadScene(string name)
+    {
+        StartCoroutine(load(name));
+    }
+
     //get to wait 0.3s to hear sound click or touch
     IEnumerator load(string name)
     {

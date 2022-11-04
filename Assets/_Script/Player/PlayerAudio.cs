@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
+    [SerializeField] private AudioClip hit_sound;
+    [SerializeField] private AudioClip jump_sound;
+    [SerializeField] private AudioClip[] gameOver;
 
     AudioSource audioSource;
-    public AudioClip hit_sound;
-    public AudioClip jump_sound;
-    public AudioClip[] gameOver;
 
     // Start is called before the first frame update
     void Start()

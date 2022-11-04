@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
+
+// UN-REFACTOR class that is not used anymore
+// => transform into PlayerAudio | PlayerInput | EggMovement | Egg
 public class PlayerController : MonoBehaviour
 {
     //static bool isSlider;

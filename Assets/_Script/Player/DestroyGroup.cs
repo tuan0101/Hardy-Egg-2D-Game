@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyGroup : MonoBehaviour {
-	public GameObject destroyPoint;
+    [SerializeField] private GameObject destroyPoint;
 
     // Use this for initialization
     void Start () {

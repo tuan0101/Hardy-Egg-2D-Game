@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GetMeltingIce : MonoBehaviour {
-    public Transform ObstaclePoint;
-    public Sprite[] sprites;
-    public float spawnRate;
+    [SerializeField] private Transform ObstaclePoint;
+    [SerializeField] private Sprite[] sprites;
+    [SerializeField] private float spawnRate;
 
     void Update()
     {

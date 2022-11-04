@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScrollField : MonoBehaviour {
-    Vector2 offset;
-    Material mat;
-    MeshRenderer mr;
-    public float paralax = 2f;
+    private Vector2 offset;
+    private Material mat;
+    private MeshRenderer mr;
+    private float paralax = 2f;
     // Use this for initialization
     void Start()
     {

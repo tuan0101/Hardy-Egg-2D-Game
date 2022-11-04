@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class EggPresenter : MonoBehaviour
 {
-    public Transform brokenEgg;
-    public Animator myAni;
-    public ParticleSystem runEffect;
-    public ParticleSystem jumpEffect;
-    public GameObject gameOverUI;
-    public bool ghost;
-    
-    GameObject[] myPlayer;
-    Animator UIAnim;     //
-    Animator UIScreen;   //
+    [Header("Egg View")]
+    [SerializeField] private Transform brokenEgg;
+    [SerializeField] private bool ghost;
+    public Animator MyAnim { get; set; }
 
-    public ParticleSystem.EmissionModule jumpEmission;
-    public ParticleSystem.EmissionModule runEmission;
+    [Header("Particle System")]
+    [SerializeField] private ParticleSystem runEffect;
+    [SerializeField] private ParticleSystem jumpEffect;
+    [SerializeField] private ParticleSystem.EmissionModule jumpEmission;
+    [SerializeField] private ParticleSystem.EmissionModule runEmission;
+    
+
+    [Header("UI")]
+    [SerializeField] private GameObject gameOverUI;
+    GameObject[] myPlayer;
+    Animator UIAnim;     
+    Animator UIScreen;
+    
+    public ParticleSystem JumpEffect { get { return jumpEffect; }  set {jumpEffect = value; } }
+
 
     private void Awake()
     {
@@ -25,7 +32,7 @@ public class EggPresenter : MonoBehaviour
 
     private void Start()
     {
-        myAni = GetComponentInChildren<Animator>();
+        MyAnim = GetComponentInChildren<Animator>();
         UIAnim = GameObject.Find("GameOverUI").GetComponent<Animator>();
         UIScreen = GameObject.Find("ScreenShader").GetComponent<Animator>();
     }
@@ -63,5 +70,10 @@ public class EggPresenter : MonoBehaviour
     {
         UIAnim.SetTrigger("isGameOver");
         UIScreen.SetTrigger("isShader");
+    }
+
+    public void SetRunEmission(bool value)
+    {
+        runEmission.enabled = value;
     }
 }

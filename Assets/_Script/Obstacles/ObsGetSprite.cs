@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ObsGetSprite : MonoBehaviour
 {
-    public GameObject[] sprites;
-
+    [SerializeField] private GameObject[] sprites;
 
     // Use this for initialization
     void Start()

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour {
 
-	public GameObject[] objects;
-	public GameObject objectToInstantiate;
-	public int poolAmount;
+	[SerializeField] private GameObject[] objects;
+	[SerializeField] private GameObject objectToInstantiate;
+	[SerializeField] private int poolAmount;
 
 	// Use this for initialization
 	void Start () {
